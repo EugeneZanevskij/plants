@@ -1,0 +1,9 @@
+@use "../abstracts" as *;
+
+h1 {
+    @include font (2.8125rem, $font-bold);
+}
+
+h2 {
+    @include font (2.5rem, $font-bold);
+}

@@ -1,0 +1,11 @@
+@use "../abstracts" as *;
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: $font-inter;
+    min-height: 100vh;
+    @include flex;
+}
