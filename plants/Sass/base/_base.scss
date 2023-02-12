@@ -6,6 +6,11 @@ html {
 
 body {
     font-family: $font-inter;
+    @include font(1rem, $font-regular);
     min-height: 100vh;
-    @include flex;
+    color: $color-text-neutral-grey;
+}
+
+a {
+    text-decoration: none;
 }

@@ -1,0 +1,40 @@
+@use "../abstracts" as *;
+
+.nav {
+    @include flex(row);
+    gap: 2.875rem;
+    
+    &__item {
+        line-height: 3.125rem;
+        font-weight: $font-bold;
+
+        @include respond-to(small) {
+            display: none;
+        }
+    }
+
+    &__link{
+        color: $color-text-neutral-grey;
+        
+        &.active {
+            color: $color-text-orange;
+        }
+    }
+
+    &__toggle {
+        padding: 0;
+        background: transparent;
+        border-color: transparent;
+        cursor: pointer;
+        @include size(2.5rem, 1.5rem);
+        display: none;
+
+        i {
+            transform: scale(3.4,1.7);
+        }
+
+        @include respond-to(small) {
+            display: block;
+        }
+    }
+}

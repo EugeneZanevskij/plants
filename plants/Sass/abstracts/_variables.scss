@@ -17,4 +17,11 @@ $color-text-orange: hsl(18, 74%, 54%);
 $color-text-green: hsl(97, 73%, 35%);
 $color-text-primary-grey: hsl(0, 0%, 44%);
 $color-text-neutral-grey: hsl(0, 1%, 38%);
-;
+
+$breakpoints : (
+    "small": 36em,       //400px Large smartphones
+    "medium": 48em,       //768px Small tablets
+    "large": 62em,       //992px Tablets
+    "xlarge": 75em,       //1200px Desktops
+    "xxlarge": 87.5em,    //1400px Large desktops
+);

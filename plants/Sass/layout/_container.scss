@@ -1,0 +1,12 @@
+@use "../abstracts" as *;
+
+.container {
+    margin: 0 6.875rem;
+
+    @include respond-to(medium) {
+        margin: 0 3.125rem;
+    }
+    @include respond-to(small) {
+        margin: 0 1.5625rem;
+    }
+}

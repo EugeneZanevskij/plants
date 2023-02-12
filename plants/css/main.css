@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Inter:wght@400;700&display=swap"); /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  min-height: 100vh;
+  color: hsl(0deg, 1%, 38%);
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 2.8125rem;
+  font-weight: 700;
+  line-height: 3.125rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.header {
+  background-color: hsl(110deg, 19%, 94%);
+  padding: 2.625rem 0;
+  color: hsl(97deg, 61%, 1%);
+  font-family: "Inika", serif;
+}
+@media (max-width: 48em) {
+  .header {
+    padding: 2.25rem 0;
+  }
+}
+.header__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo img {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.header__nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2.875rem;
+}
+.nav__item {
+  line-height: 3.125rem;
+  font-weight: 700;
+}
+@media (max-width: 36em) {
+  .nav__item {
+    display: none;
+  }
+}
+.nav__link {
+  color: hsl(0deg, 1%, 38%);
+}
+.nav__link.active {
+  color: hsl(18deg, 74%, 54%);
+}
+.nav__toggle {
+  padding: 0;
+  background: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  width: 2.5rem;
+  height: 1.5rem;
+  display: none;
+}
+.nav__toggle i {
+  transform: scale(3.4, 1.7);
+}
+@media (max-width: 36em) {
+  .nav__toggle {
+    display: block;
+  }
+}
+
+.container {
+  margin: 0 6.875rem;
+}
+@media (max-width: 48em) {
+  .container {
+    margin: 0 3.125rem;
+  }
+}
+@media (max-width: 36em) {
+  .container {
+    margin: 0 1.5625rem;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

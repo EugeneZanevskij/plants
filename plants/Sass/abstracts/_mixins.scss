@@ -3,7 +3,7 @@
 //Media query
 @mixin respond-to($breakpoint) {
     @if map-has-key($breakpoints, $breakpoint) {
-        @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+        @media (max-width: #{map-get($breakpoints, $breakpoint)}) {
             @content;
         }
     }
@@ -31,4 +31,22 @@
     > * {
         flex-basis: $width;
     }
+}
+
+@mixin img-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+@mixin absCenter {
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

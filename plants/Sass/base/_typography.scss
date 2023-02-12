@@ -2,6 +2,7 @@
 
 h1 {
     @include font (2.8125rem, $font-bold);
+    line-height: 3.125rem;
 }
 
 h2 {
