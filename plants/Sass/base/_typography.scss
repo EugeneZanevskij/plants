@@ -14,7 +14,17 @@ h1 {
 }
 
 h2 {
-    @include font (2.5rem, $font-bold);
+    font-family: $font-inika;
+    @include font (rem(40), $font-regular);
+    line-height: rem(52);
+    @include respond-to(medium) {
+        @include font (rem(35));
+        line-height: rem(46);
+    }
+    @include respond-to(small) {
+        @include font (rem(25));
+        line-height: rem(33);
+    }
 }
 
 p {
