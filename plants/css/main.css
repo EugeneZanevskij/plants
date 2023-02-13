@@ -308,6 +308,7 @@ p {
 .welcome__btn {
   border: 0.125rem solid hsl(18deg, 74%, 54%);
   border-radius: 0.625rem;
+  background: transparent;
   padding: 0.875rem 1.6875rem;
   margin-inline: 0 auto;
   font-size: 1rem;
@@ -359,7 +360,7 @@ p {
     gap: 2.5rem;
   }
 }
-@media (max-width: 48em) {
+@media (max-width: 36em) {
   .about__container {
     gap: 0;
   }
@@ -427,9 +428,99 @@ p {
   }
 }
 
+.service {
+  background-color: hsl(110deg, 19%, 94%);
+  padding: 2.5rem 0 7.5rem;
+  font-family: "Inter", sans-serif;
+}
+@media (max-width: 48em) {
+  .service {
+    padding: 3.75rem 0 4.375rem;
+  }
+}
+@media (max-width: 36em) {
+  .service {
+    padding: 1.875rem 0 1.6875rem;
+  }
+}
+.service__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5.625rem;
+}
+@media (max-width: 48em) {
+  .service__container {
+    gap: 2.5rem;
+  }
+}
+.service__types {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8.875rem;
+}
+@media (max-width: 48em) {
+  .service__types {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+  }
+}
+@media (max-width: 36em) {
+  .service__types {
+    gap: 2.1875rem;
+  }
+}
+.service__title {
+  width: 19.125rem;
+}
+@media (max-width: 36em) {
+  .service__title {
+    width: 11.6875rem;
+  }
+}
+.service__btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2.375rem;
+  flex-wrap: wrap;
+}
+@media (max-width: 36em) {
+  .service__btns {
+    gap: 0.625rem;
+  }
+}
+.service__projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.service__projects > * {
+  flex-basis: 27%;
+}
+
 .btn {
   border: 0.0625rem solid hsl(18deg, 74%, 54%);
   border-radius: 5px;
+  padding: 0.75rem 2.5rem;
+  color: hsl(18deg, 74%, 54%);
+  background: transparent;
+  font-family: "Inika", serif;
+  font-size: 1.25rem;
+  line-height: 1.625rem;
+}
+@media (max-width: 36em) {
+  .btn {
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

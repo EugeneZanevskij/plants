@@ -3,4 +3,15 @@
 .btn {
     border: rem(1) solid $color-text-orange;
     border-radius: 5px;
+    padding: rem(12) rem(40);
+    color: $color-text-orange;
+    background: transparent;
+    font-family: $font-inika;
+    font-size: rem(20);
+    line-height: rem(26);
+
+    @include respond-to(small) {
+        font-size: rem(15);
+        line-height: rem(20);
+    }
 }

@@ -1,0 +1,71 @@
+@use "../abstracts" as *;
+
+.service {
+    background-color: $color-background-green;
+    padding: rem(40) 0 rem(120);
+    font-family: $font-inter;
+
+    @include respond-to(medium) {
+        padding: rem(60) 0 rem(70);
+    }
+    @include respond-to(small) {
+        padding: rem(30) 0 rem(27);
+    }
+
+    &__container {
+        @include flex(column, center, flex-start);
+        gap: rem(90);
+
+        @include respond-to(medium) {
+            gap: rem(40);
+        }
+        @include respond-to(small) {
+        }
+    }
+
+    &__types {
+        @include flex(row);
+        gap: rem(142);
+        
+        @include respond-to(medium) {
+            @include flex;
+            gap: rem(40);
+        }
+        @include respond-to(small) {
+            gap:rem(35);
+        }
+    }
+    
+    &__title {
+        width: rem(306);
+        
+        @include respond-to(small) {
+            width: rem(187);
+        }
+    }
+    &__btns {
+        @include flex(row);
+        gap: rem(38);
+        flex-wrap: wrap;
+
+        @include respond-to(small) {
+            gap: rem(10);
+        }
+    }
+
+    &__projects {
+        @include columns(27%);
+        
+    }
+
+    // &__image, &__image img {
+    //     @include size(rem(464), rem(479));
+
+    //     @include respond-to(large) {
+    //         @include size(rem(250), rem(258));
+    //     }
+    //     @include respond-to(small) {
+    //         @include size(rem(150), rem(147));
+    //     }
+    // }
+}

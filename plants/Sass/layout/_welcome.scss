@@ -59,6 +59,7 @@
     &__btn {
         border: rem(2) solid $color-text-orange;
         border-radius: rem(10);
+        background: transparent;
         padding: rem(14) rem(27);
         margin-inline: 0 auto;
         @include font(rem(16));

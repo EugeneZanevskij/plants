@@ -19,7 +19,7 @@
             @include flex;
             gap: rem(40);
         }
-        @include respond-to(medium) {
+        @include respond-to(small) {
             gap: 0;
         }
     }
