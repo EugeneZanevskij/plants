@@ -1,0 +1,33 @@
+@use "../abstracts" as *;
+
+.welcome {
+    background-color: $color-background-green;
+    padding: 3.875rem 0;
+    font-family: $font-inika;
+
+    @include respond-to(medium) {
+        padding: 2.5rem 0 4.375rem;
+    }
+    @include respond-to(small) {
+        padding: 1.5625rem 0;
+    }
+
+    &__container {
+        @include flex(row, space-between);
+
+        @include respond-to(medium) {
+            @include flex(row-reverse, space-between);
+        }
+    }
+
+    &__image {
+        @include size(28rem, 25.5rem);
+
+        @include respond-to(medium) {
+            @include size(17.5rem, 15.875rem);
+        }
+        @include respond-to(medium) {
+            display: none;
+        }
+    }
+}

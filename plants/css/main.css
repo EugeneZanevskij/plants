@@ -185,4 +185,54 @@ h2 {
   }
 }
 
+.welcome {
+  background-color: hsl(110deg, 19%, 94%);
+  padding: 3.875rem 0;
+  font-family: "Inika", serif;
+}
+@media (max-width: 48em) {
+  .welcome {
+    padding: 2.5rem 0 4.375rem;
+  }
+}
+@media (max-width: 36em) {
+  .welcome {
+    padding: 1.5625rem 0;
+  }
+}
+.welcome__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 48em) {
+  .welcome__container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.welcome__image {
+  width: 28rem;
+  height: 25.5rem;
+}
+@media (max-width: 48em) {
+  .welcome__image {
+    width: 17.5rem;
+    height: 15.875rem;
+  }
+}
+@media (max-width: 48em) {
+  .welcome__image {
+    display: none;
+  }
+}
+
+.btn {
+  border: 1px solid hsl(18deg, 74%, 54%);
+  border-radius: 5px;
+}
+
 /*# sourceMappingURL=main.css.map */
