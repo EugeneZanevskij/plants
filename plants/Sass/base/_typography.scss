@@ -1,10 +1,23 @@
 @use "../abstracts" as *;
 
 h1 {
-    @include font (2.8125rem, $font-bold);
-    line-height: 3.125rem;
+    @include font (rem(45), $font-bold);
+    line-height: rem(50);
+
+    @include respond-to(medium) {
+        @include font (rem(35));
+    }
+    @include respond-to(small) {
+        @include font (rem(25));
+        line-height: rem(35);
+    }
 }
 
 h2 {
     @include font (2.5rem, $font-bold);
+}
+
+p {
+    @include font(rem(16), $font-regular);
+    line-height: rem(20);
 }
