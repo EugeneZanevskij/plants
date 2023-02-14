@@ -529,6 +529,71 @@ p {
   }
 }
 
+.price {
+  padding: 2.5rem 0 7.1875rem;
+}
+@media (max-width: 48em) {
+  .price {
+    padding: 2.5rem 0 5.5rem;
+  }
+}
+@media (max-width: 36em) {
+  .price {
+    text-align: center;
+    padding: 1.5625rem 0 2.5rem;
+  }
+}
+.price__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.price__prices {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3.75rem;
+}
+@media (max-width: 48em) {
+  .price__prices {
+    gap: 3.125rem;
+  }
+}
+@media (max-width: 36em) {
+  .price__prices {
+    gap: 2.5rem;
+  }
+}
+.price__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 3rem;
+  color: hsl(97deg, 61%, 1%);
+  font-family: "Inter", sans-serif;
+}
+@media (max-width: 48em) {
+  .price__title {
+    font-size: 2.1875rem;
+    font-weight: 400;
+    line-height: 2.625rem;
+  }
+}
+@media (max-width: 48em) {
+  .price__title {
+    font-size: 1.5625rem;
+    font-weight: 400;
+    line-height: 1.875rem;
+  }
+}
+.price__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-end;
+}
 .btn {
   border: 0.0625rem solid hsl(18deg, 74%, 54%);
   border-radius: 5px;
@@ -553,6 +618,11 @@ p {
   text-align: center;
   border: 0.0625rem solid hsl(51deg, 20%, 86%);
   border-radius: 1.25rem;
+}
+@media (max-width: 36em) {
+  .card {
+    margin-inline: 1.5625rem;
+  }
 }
 .card__image img {
   width: 100%;

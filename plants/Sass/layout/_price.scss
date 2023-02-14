@@ -1,0 +1,59 @@
+@use "../abstracts" as *;
+
+.price {
+    padding: rem(40) 0 rem(115);
+    
+    @include respond-to(medium) {
+        padding: rem(40) 0 rem(88);
+    }
+
+    @include respond-to(small) {
+        text-align: center;
+        padding: rem(25) 0 rem(40);
+    }
+
+    &__container {
+        @include flex(row, space-between, flex-start)
+    }
+
+    &__prices {
+        @include flex;
+        gap: rem(60);
+        
+        @include respond-to(medium) {
+            gap: rem(50);
+        }
+        @include respond-to(small) {
+            gap: rem(40);
+        }
+    }
+
+    &__title {
+        @include font(rem(40), $font-bold);
+        line-height: rem(48);
+        color: $color-text-black;
+        font-family: $font-inter;
+
+        @include respond-to (medium) {
+            @include font(rem(35));
+            line-height: rem(42);
+        }
+        @include respond-to (medium) {
+            @include font(rem(25));
+            line-height: rem(30);
+        }
+    }
+
+    &__box {}
+
+    &__content{
+        @include flex;
+        align-items: flex-end;
+    }
+
+    &__heading{}
+
+    &__btn{}
+
+    &__image{}
+}

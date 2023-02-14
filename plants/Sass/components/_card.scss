@@ -5,6 +5,10 @@
     border: rem(1) solid $color-border-card;
     border-radius: rem(20);
 
+    @include respond-to(small) {
+        margin-inline: rem(25);
+    }
+
     &__image img {
         @include img-cover;
     }
