@@ -65,10 +65,13 @@
 
     &__content{
         @include flex;
-        margin-top: rem(98);
         align-items: flex-end;
         width: max(37%, rem(296));
+        @include respond-to (medium) {
+            margin-top: rem(98);
+        }
         @include respond-to (small) {
+            margin-top: 0;
             align-items: center;
             width: max(rem(230), 60%);
         }

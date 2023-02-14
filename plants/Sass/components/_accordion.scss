@@ -3,11 +3,17 @@
 .accordion {
     border-radius: 20px;
     background-color: $color-background-green;
+    padding: 0 rem(40);
     overflow: hidden;
     width: 100%;
+    @include respond-to(small) {
+        font-size: rem(16);
+        padding-inline: rem(30) rem(40);
+    }
+
     &__btn {
         @include flex(row,space-between);
-        padding: rem(16) rem(40);
+        padding: rem(16) 0;
         background: transparent;
         border: none;
         width: 100%;
@@ -17,18 +23,12 @@
 
         @include respond-to(small) {
             font-size: rem(16);
-            padding-inline: rem(30) rem(40);
         }
     }
     &__info{
         display: none;
-        padding: rem(6) rem(40) rem(12);
-        @include before(rem(163), 0, rem(40), $color-text-primary-grey);
-
-        @include respond-to(small) {
-            padding-inline: rem(30) rem(40);
-            @include before(rem(110), 0, rem(30), $color-text-primary-grey);
-        }
+        padding: rem(6) 0 rem(12);
+        @include before(100%, 0, 0, $color-text-primary-grey);
     }
     &__desc {
         @include font(rem(10));

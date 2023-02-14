@@ -625,12 +625,17 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 6.125rem;
   align-items: flex-end;
   width: max(37%, 18.5rem);
 }
+@media (max-width: 48em) {
+  .prices__content {
+    margin-top: 6.125rem;
+  }
+}
 @media (max-width: 36em) {
   .prices__content {
+    margin-top: 0;
     align-items: center;
     width: max(14.375rem, 60%);
   }
@@ -753,15 +758,22 @@ p {
 .accordion {
   border-radius: 20px;
   background-color: hsl(110deg, 19%, 94%);
+  padding: 0 2.5rem;
   overflow: hidden;
   width: 100%;
+}
+@media (max-width: 36em) {
+  .accordion {
+    font-size: 1rem;
+    padding-inline: 1.875rem 2.5rem;
+  }
 }
 .accordion__btn {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2.5rem;
+  padding: 1rem 0;
   background: transparent;
   border: none;
   width: 100%;
@@ -773,12 +785,11 @@ p {
 @media (max-width: 36em) {
   .accordion__btn {
     font-size: 1rem;
-    padding-inline: 1.875rem 2.5rem;
   }
 }
 .accordion__info {
   display: none;
-  padding: 0.375rem 2.5rem 0.75rem;
+  padding: 0.375rem 0 0.75rem;
   position: relative;
   z-index: 1;
 }
@@ -787,27 +798,10 @@ p {
   display: block;
   position: absolute;
   top: 0;
-  left: 2.5rem;
-  width: 10.1875rem;
+  left: 0;
+  width: 100%;
   border: 1px solid hsl(0deg, 0%, 44%);
   z-index: 2;
-}
-@media (max-width: 36em) {
-  .accordion__info {
-    padding-inline: 1.875rem 2.5rem;
-    position: relative;
-    z-index: 1;
-  }
-  .accordion__info:before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 1.875rem;
-    width: 6.875rem;
-    border: 1px solid hsl(0deg, 0%, 44%);
-    z-index: 2;
-  }
 }
 .accordion__desc {
   font-size: 0.625rem;

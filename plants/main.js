@@ -2,9 +2,9 @@ const navLinks = document.querySelectorAll(".nav__link");
 const serviceBtns = document.querySelectorAll(".service__btn");
 const serviceProjects = document.querySelectorAll(".service__project");
 const accordions = document.querySelectorAll(".accordion");
+console.log(accordions);
 
 
-console.log(navLinks);
 navLinks.forEach(navLink => {
     navLink.addEventListener("click", (e) => {
         navLinks.forEach(navLinkItem => {
@@ -13,11 +13,10 @@ navLinks.forEach(navLink => {
         e.target.classList.add("active");
     });
 });
-console.log(serviceBtns);
+
 serviceBtns.forEach(serviceBtn => {
     serviceBtn.addEventListener("click", (e) => {
         const type = e.target.dataset.type;
-        console.log(type);
         //to deactivate buttons
         serviceBtns.forEach(serviceBtnItem => {
             if (serviceBtnItem !== e.target) {
@@ -29,7 +28,6 @@ serviceBtns.forEach(serviceBtn => {
         //transform to array to check num of ACTIVE btns
         const serviceBtnsArr = Array.from(serviceBtns);
         const numActive = serviceBtnsArr.filter(item => item.classList.contains("active")).length;
-        console.log(numActive);
         //to check which projects have other type
         serviceProjects.forEach(serviceProject => {
             serviceProject.classList.remove("blur");
@@ -45,12 +43,13 @@ serviceBtns.forEach(serviceBtn => {
 accordions.forEach(accordion => {
     accordion.addEventListener("click", (e) => {
         //to deactivate buttons
+        console.log(e.target);
         accordions.forEach(accordionItem => {
-            if (accordionItem !== e.target) {
+            if (accordionItem !== e.currentTarget) {
                 accordionItem.classList.remove("active");
             }
         });
         //to make button active
-        e.target.classList.toggle("active");
+        e.currentTarget.classList.toggle("active");
     });
 });
