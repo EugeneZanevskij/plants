@@ -1,0 +1,25 @@
+@use "../abstracts" as *;
+
+.accordion {
+    border-radius: 20px;
+    background-color: $color-background-green;
+    overflow: hidden;
+    &__btn {
+        padding: rem(16) rem(40);
+        background: transparent;
+        border: none;
+        width: 100%;
+    }
+    &__info {
+        display: none;
+    }
+    &.active .accordion{
+        background-color: $color-background-accordion;
+        // &__btn {
+        //     background: #111111;
+        // }
+        &__info {
+            display: block;
+        }
+    }
+}

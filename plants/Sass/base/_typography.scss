@@ -5,10 +5,10 @@ h1 {
     line-height: rem(50);
 
     @include respond-to(medium) {
-        @include font (rem(35));
+        @include font (rem(35), $font-bold);
     }
     @include respond-to(small) {
-        @include font (rem(25));
+        @include font (rem(25), $font-bold);
         line-height: rem(35);
     }
 }

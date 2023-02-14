@@ -29,6 +29,7 @@
         
         @include respond-to(medium) {
             @include flex;
+            align-items: flex-start;
             gap: rem(40);
         }
         @include respond-to(small) {
@@ -38,6 +39,7 @@
     
     &__title {
         width: rem(306);
+        text-align: left;
         
         @include respond-to(small) {
             width: rem(187);
