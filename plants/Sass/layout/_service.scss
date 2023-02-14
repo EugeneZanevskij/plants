@@ -55,7 +55,16 @@
 
     &__projects {
         @include columns(27%);
+        gap: rem(55);
         
+        @include respond-to(medium) {
+            @include columns(42%);
+            gap: rem(38);
+        }
+        @include respond-to(small) {
+            @include columns(100%);
+            gap: rem(34);
+        }
     }
 
     // &__image, &__image img {

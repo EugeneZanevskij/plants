@@ -501,15 +501,39 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  gap: 3.4375rem;
 }
 .service__projects > * {
   flex-basis: 27%;
+}
+@media (max-width: 48em) {
+  .service__projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2.375rem;
+  }
+  .service__projects > * {
+    flex-basis: 42%;
+  }
+}
+@media (max-width: 36em) {
+  .service__projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2.125rem;
+  }
+  .service__projects > * {
+    flex-basis: 100%;
+  }
 }
 
 .btn {
   border: 0.0625rem solid hsl(18deg, 74%, 54%);
   border-radius: 5px;
-  padding: 0.75rem 2.5rem;
+  padding: 0.75rem 0;
+  width: 10.0625rem;
   color: hsl(18deg, 74%, 54%);
   background: transparent;
   font-family: "Inika", serif;
@@ -520,6 +544,39 @@ p {
   .btn {
     font-size: 0.9375rem;
     line-height: 1.25rem;
+    padding: 0.5rem 0;
+    width: 7.5625rem;
+  }
+}
+
+.card {
+  text-align: center;
+  border: 0.0625rem solid hsl(51deg, 20%, 86%);
+  border-radius: 1.25rem;
+}
+.card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card__header {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.25rem;
+  color: hsl(18deg, 74%, 54%);
+  margin: 0.625rem 0;
+}
+.card__text {
+  margin-bottom: 2.25rem;
+}
+@media (max-width: 48em) {
+  .card__text {
+    margin-bottom: 1.125rem;
+  }
+}
+@media (max-width: 36em) {
+  .card__text {
+    margin-bottom: 1.25rem;
   }
 }
 
