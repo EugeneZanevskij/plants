@@ -30,4 +30,8 @@
             margin-bottom: rem(20);
         }
     }
+
+    &.blur {
+        @include css3-prefix(filter, blur(rem(2)));
+    }
 }

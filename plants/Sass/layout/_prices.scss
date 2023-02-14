@@ -1,6 +1,6 @@
 @use "../abstracts" as *;
 
-.price {
+.prices {
     padding: rem(40) 0 rem(115);
     
     @include respond-to(medium) {
@@ -41,9 +41,8 @@
 
         @include respond-to (medium) {
             @include font(rem(35), $font-bold);
-            line-height: rem(42);
         }
-        @include respond-to (medium) {
+        @include respond-to (small) {
             @include font(rem(25), $font-bold);
             line-height: rem(30);
         }
@@ -66,6 +65,7 @@
 
     &__content{
         @include flex;
+        margin-top: rem(98);
         align-items: flex-end;
         width: max(37%, rem(296));
         @include respond-to (small) {

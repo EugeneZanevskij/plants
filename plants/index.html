@@ -17,11 +17,31 @@
             </div>
             <nav class="header__nav">
                 <ul class="nav">
-                    <li class="nav__item"><a class="nav__link active" href="#welcome">Home</a></li>
-                    <li class="nav__item"><a class="nav__link" href="#about">About us</a></li>
-                    <li class="nav__item"><a class="nav__link" href="#service">Service</a></li>
-                    <li class="nav__item"><a class="nav__link" href="#prices">Price</a></li>
-                    <li class="nav__item"><a class="nav__link" href="#contacts">Contacts</a></li>
+                    <li class="nav__item">
+                        <a class="nav__link active" href="#welcome">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="#about">
+                            About us
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="#service">
+                            Service
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="#prices">
+                            Price
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="#contacts">
+                            Contacts
+                        </a>
+                    </li>
                 </ul>
                 <button class="nav__toggle">
                     <i class="fas fa-bars"></i>
@@ -73,19 +93,19 @@
                     <span class="u-text--green">Service and our projects</span>
                 </h2>
                 <div class="service__btns">
-                    <button class="service__btn btn">
+                    <button class="service__btn btn" data-type="garden">
                         Garden
                     </button>
-                    <button class="service__btn btn">
+                    <button class="service__btn btn" data-type="lawn">
                         Lawn
                     </button>
-                    <button class="service__btn btn">
+                    <button class="service__btn btn" data-type="planting">
                         Planting
                     </button>
                 </div>
             </div>
             <div class="service__projects">
-                <div class="service__project card">
+                <div class="service__project card" data-type="garden">
                     <div class="card__image">
                         <img src="assets/service-item-1.png" alt="Garden care">
                     </div>
@@ -96,7 +116,7 @@
                         Lorem Ipsum has been the industry
                     </p>
                 </div>
-                <div class="service__project card">
+                <div class="service__project card" data-type="planting">
                     <div class="card__image">
                         <img src="assets/service-item-2.png" alt="Garden care">
                     </div>
@@ -107,7 +127,7 @@
                         Lorem Ipsum has been the industry
                     </p>
                 </div>
-                <div class="service__project card">
+                <div class="service__project card" data-type="lawn">
                     <div class="card__image">
                         <img src="assets/service-item-3.png" alt="Garden care">
                     </div>
@@ -118,7 +138,7 @@
                         Lorem Ipsum has been the industry
                     </p>
                 </div>
-                <div class="service__project card">
+                <div class="service__project card" data-type="planting">
                     <div class="card__image">
                         <img src="assets/service-item-4.png" alt="Garden care">
                     </div>
@@ -129,7 +149,7 @@
                         Lorem Ipsum has been the industry
                     </p>
                 </div>
-                <div class="service__project card">
+                <div class="service__project card" data-type="garden">
                     <div class="card__image">
                         <img src="assets/service-item-5.png" alt="Garden care">
                     </div>
@@ -140,7 +160,7 @@
                         Lorem Ipsum has been the industry
                     </p>
                 </div>
-                <div class="service__project card">
+                <div class="service__project card" data-type="lawn">
                     <div class="card__image">
                         <img src="assets/service-item-6.png" alt="Garden care">
                     </div>
@@ -154,13 +174,13 @@
             </div>
         </div>
     </section>
-    <section class="price" id="price">
-        <div class="container price__container">
-            <div class="price__prices">
-                <h2 class="price__title">
+    <section class="prices" id="prices">
+        <div class="container prices__container">
+            <div class="prices__pricess">
+                <h2 class="prices__title">
                     Prices
                 </h2>
-                <div class="price__box">
+                <div class="prices__box">
                     <div class="accordion">
                         <button type="button" class="accordion__btn">
                             Basic
@@ -172,7 +192,7 @@
                             <p class="accordion__desc">
                                 Release of Letraset sheets containing Lorem Ipsum passages, and more recently
                             </p>
-                            <div class="accordion__price">
+                            <div class="accordion__prices">
                                 <span class="u-text--orange">$15</span> / per hour
                             </div>
                             <a href="#contacts" class="accordion__order">
@@ -191,7 +211,7 @@
                             <p class="accordion__desc">
                                 Release of Letraset sheets containing Lorem Ipsum passages, and more recently
                             </p>
-                            <div class="accordion__price">
+                            <div class="accordion__prices">
                                 <span class="u-text--orange">$25</span> / per hour
                             </div>
                             <a href="#contacts" class="accordion__order">
@@ -210,7 +230,7 @@
                             <p class="accordion__desc">
                                 Release of Letraset sheets containing Lorem Ipsum passages, and more recently
                             </p>
-                            <div class="accordion__price">
+                            <div class="accordion__prices">
                                 <span class="u-text--orange">$35</span> / per hour
                             </div>
                             <a href="#contacts" class="accordion__order">
@@ -220,20 +240,22 @@
                     </div>
                 </div>
             </div>
-            <div class="price__content">
-                <div class="price__heading">
+            <div class="prices__content">
+                <div class="prices__heading">
                     Our best
                     <span class="u-text--green"> gardeners </span>
                     are ready to help you
                 </div>
-                <button class="price__btn btn">
+                <button class="prices__btn btn">
                     Contact us
                 </button>
-                <div class="price__image">
+                <div class="prices__image">
                     <img src="assets/leafs-price.png" alt="Leafs">
                 </div>
             </div>
         </div>
     </section>
+
+    <script src="main.js"></script>
 </body>
 </html>
