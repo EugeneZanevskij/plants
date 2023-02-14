@@ -22,7 +22,7 @@
     }
 
     &__prices {
-        @include flex;
+        @include flex(column, center, flex-start);
         gap: rem(60);
         
         @include respond-to(medium) {
@@ -52,8 +52,9 @@
     &__box {
         border: rem(1) solid $color-border-card;
         border-radius: rem(20);
-        padding: rem(41) rem(34);
+        padding: rem(34) rem(41);
         width: rem(332);
+        @include flex;
         gap: rem(32);
         
         @include respond-to(small) {

@@ -50,3 +50,21 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+@mixin before($width, $top, $left, $color) {
+    position: relative;
+    z-index: 1;
+
+    &:before{
+        content: '';
+        display: block;
+        position: absolute;
+        top: $top;
+        left: $left;
+        width: $width;
+        border: 1px solid $color;
+        z-index: 2;
+
+        @content;
+    }
+}
