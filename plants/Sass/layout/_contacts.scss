@@ -44,7 +44,23 @@
     }
 
     &__box {
+        @include flex(column, center, flex-start);
+        width: rem(450);
         gap: rem(47);
+
+        @include respond-to(small) {
+            width: rem(300);
+        }
+
+        > .active {
+            @include respond-to(medium) {
+                margin-top: rem(-40);
+            }
+        }
+    }
+
+    &__adress {
+        width: 100%;
     }
 
     &__image{
@@ -53,7 +69,11 @@
         left: rem(109);
         @include size(rem(400), rem(497));
         
-        @include respond-to(medium) {
+        &.hidden {
+            visibility: hidden;
+        }
+
+        @include respond-to(large) {
             @include size(rem(200), rem(248.5));
             left: rem(294);
         }
@@ -61,6 +81,8 @@
             @include size(rem(100), rem(124.25));
             left: rem(142);
         }
+
+
     }
 
 

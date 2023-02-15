@@ -2,7 +2,7 @@
 
 .dropdown {
     cursor: pointer;
-    @include size(rem(450), rem(50));
+    @include size(100%, rem(50));
     padding-left: rem(20);
     @include font(rem(20));
     line-height: rem(40);
