@@ -1,0 +1,67 @@
+@use "../abstracts" as *;
+
+.contacts {
+    position: relative;
+    padding-top: rem(60);
+    background-color: $color-background-green;
+    
+    @include respond-to(medium) {
+        padding-top: rem(40);
+    }
+    @include respond-to(small) {
+        padding-top: rem(25);
+    }
+    
+    &__title {
+        text-align: center;
+        @include font(rem(40), $font-bold);
+        line-height: rem(52);
+        color: $color-text-green;
+        font-family: $font-inika;
+        
+
+        @include respond-to (small) {
+            @include font(rem(25), $font-bold);
+            line-height: rem(33);
+        }
+    }
+    
+    
+    &__container {
+        @include flex(column, space-between, flex-end);
+        height: rem(402);
+        margin-top: rem(37);
+        
+        @include respond-to(medium) {
+            align-items: center;
+            height: rem(548);
+            margin-top: rem(100);
+        }
+        @include respond-to(small) {
+            height: rem(306);
+            margin-top: rem(80);
+        }
+    }
+
+    &__box {
+        gap: rem(47);
+    }
+
+    &__image{
+        position: absolute;
+        bottom: 0;
+        left: rem(109);
+        @include size(rem(400), rem(497));
+        
+        @include respond-to(medium) {
+            @include size(rem(200), rem(248.5));
+            left: rem(294);
+        }
+        @include respond-to(small) {
+            @include size(rem(100), rem(124.25));
+            left: rem(142);
+        }
+    }
+
+
+}
