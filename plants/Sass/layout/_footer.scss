@@ -1,0 +1,52 @@
+@use "../abstracts" as *;
+
+.footer {
+    background-color: $color-background-white;
+    padding: rem(40) 0;
+    color: $color-text-black;
+    
+
+    @include respond-to(medium) {
+        padding-block: rem(33) rem(18);
+    }
+    @include respond-to(small) {
+        padding-block: rem(22) rem(7);
+    }
+
+    &__container {
+        @include flex(row, space-between);
+
+        @include respond-to(medium) {
+            flex-direction: column;
+            gap: rem(16);
+        }
+    }
+
+    &__col {
+        @include flex(row);
+        gap: rem(20);
+        @include font(rem(20));
+    }
+
+    &__link {
+        color: $color-text-black;
+        line-height: rem(50);
+
+        &:hover {
+            color: $color-text-orange;
+        }
+
+        @include respond-to(medium) {
+            line-height: rem(24);
+        }
+    }
+
+    &__socials {
+        @include flex(row);
+        gap: rem(20);
+    }
+
+    &__social-link {
+        @include font(rem(32));
+    }
+}
