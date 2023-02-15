@@ -8,6 +8,10 @@
         line-height: 3.125rem;
         font-weight: $font-bold;
 
+        &:hover {
+            @include css3-prefix(transform, scale(1.4));
+        }
+
         @include respond-to(small) {
             display: none;
         }
@@ -15,7 +19,7 @@
 
     &__link{
         color: $color-text-neutral-grey;
-        
+
         &.active {
             color: $color-text-orange;
         }

@@ -11,6 +11,10 @@
         padding-inline: rem(30) rem(40);
     }
 
+    &:hover {
+        background-color: $color-background-accordion;
+    }
+
     &__btn {
         @include flex(row,space-between);
         padding: rem(16) 0;

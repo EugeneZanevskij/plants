@@ -186,6 +186,13 @@ p {
   line-height: 3.125rem;
   font-weight: 700;
 }
+.nav__item:hover {
+  -webkit-transform: scale(1.4);
+  -moz-transform: scale(1.4);
+  -ms-transform: scale(1.4);
+  -o-transform: scale(1.4);
+  transform: scale(1.4);
+}
 @media (max-width: 36em) {
   .nav__item {
     display: none;
@@ -699,7 +706,7 @@ p {
   font-size: 1.25rem;
   line-height: 1.625rem;
 }
-.btn.active {
+.btn.active, .btn:hover {
   color: hsl(0deg, 0%, 100%);
   background: hsl(18deg, 74%, 54%);
 }
@@ -767,6 +774,9 @@ p {
     font-size: 1rem;
     padding-inline: 1.875rem 2.5rem;
   }
+}
+.accordion:hover {
+  background-color: hsl(110deg, 29%, 86%);
 }
 .accordion__btn {
   display: flex;
