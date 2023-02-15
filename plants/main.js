@@ -2,6 +2,10 @@ const navLinks = document.querySelectorAll(".nav__link");
 const serviceBtns = document.querySelectorAll(".service__btn");
 const serviceProjects = document.querySelectorAll(".service__project");
 const accordions = document.querySelectorAll(".accordion");
+const toggle = document.querySelector(".header__toggle");
+const headerNav = document.querySelector(".header__nav");
+
+
 console.log(accordions);
 
 
@@ -52,4 +56,24 @@ accordions.forEach(accordion => {
         //to make button active
         e.currentTarget.classList.toggle("active");
     });
+});
+
+//toggle button
+toggle.addEventListener("click", () => {
+    headerNav.classList.toggle("active");
+    toggle.classList.toggle("active");
+    headerNav.addEventListener("click", () => {
+        headerNav.classList.remove("active");
+        toggle.classList.remove("active");
+    });
+});
+
+//if click outside nav, it closes
+window.addEventListener("click", (e) => {
+    if (e.target!==headerNav && e.target!==toggle) {
+        if (headerNav.classList.contains("active")) {
+            headerNav.classList.remove("active");
+            toggle.classList.remove("active");
+        };
+    };
 });

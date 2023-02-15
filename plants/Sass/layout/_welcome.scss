@@ -57,6 +57,7 @@
     }
 
     &__btn {
+        cursor: pointer;
         border: rem(2) solid $color-text-orange;
         border-radius: rem(10);
         background: transparent;
