@@ -833,7 +833,7 @@ p {
   height: 25.125rem;
   margin-top: 2.3125rem;
 }
-@media (max-width: 48em) {
+@media (max-width: 62em) {
   .contacts__container {
     align-items: center;
     height: 34.25rem;
@@ -859,7 +859,7 @@ p {
     width: 18.75rem;
   }
 }
-@media (max-width: 48em) {
+@media (max-width: 62em) {
   .contacts__box > .active {
     margin-top: -2.5rem;
   }
@@ -874,9 +874,6 @@ p {
   width: 25rem;
   height: 31.0625rem;
 }
-.contacts__image.hidden {
-  visibility: hidden;
-}
 @media (max-width: 62em) {
   .contacts__image {
     width: 12.5rem;
@@ -889,6 +886,9 @@ p {
     width: 6.25rem;
     height: 7.765625rem;
     left: 8.875rem;
+  }
+  .contacts__image.hidden {
+    visibility: hidden;
   }
 }
 
@@ -1096,6 +1096,11 @@ p {
   line-height: 2.5rem;
   letter-spacing: 0.05em;
 }
+@media (max-width: 36em) {
+  .adress__line {
+    line-height: 1.25rem;
+  }
+}
 .adress__name {
   display: block;
   width: 8.25rem;
@@ -1104,7 +1109,6 @@ p {
 @media (max-width: 36em) {
   .adress__name {
     width: 4.0625rem;
-    line-height: 1.25rem;
   }
 }
 .adress__value {

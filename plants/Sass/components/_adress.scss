@@ -16,7 +16,11 @@
         @include flex(row, center, flex-start);
         @include font(rem(16));
         line-height: rem(40);
+        // height: rem(40);
         letter-spacing: 0.05em;
+        @include respond-to(small) {
+            line-height: rem(20);
+        }
     }
     
     &__name {
@@ -26,7 +30,6 @@
         
         @include respond-to(small) {
             width: rem(65);
-            line-height: rem(20);
         }
     }
 
