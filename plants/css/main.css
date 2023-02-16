@@ -996,6 +996,9 @@ p {
     font-size: 1rem;
   }
 }
+.accordion__icon {
+  pointer-events: none;
+}
 .accordion__info {
   display: none;
   padding: 0.375rem 0 0.75rem;

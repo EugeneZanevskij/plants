@@ -1,3 +1,4 @@
+//adresses for contacts section
 const adresses = {
   canandaigua: {
     city: "Canandaigua, NY",
@@ -31,6 +32,7 @@ const dropdown = document.querySelector(".dropdown");
 const contactsAdress = document.querySelector(".contacts__adress");
 const contactsImage = document.querySelector(".contacts__image");
 
+//active links
 navLinks.forEach((navLink) => {
   navLink.addEventListener("click", (e) => {
     navLinks.forEach((navLinkItem) => {
@@ -40,6 +42,7 @@ navLinks.forEach((navLink) => {
   });
 });
 
+//service is blur if not active
 serviceBtns.forEach((serviceBtn) => {
   serviceBtn.addEventListener("click", (e) => {
     const type = e.target.dataset.type;
@@ -68,17 +71,20 @@ serviceBtns.forEach((serviceBtn) => {
   });
 });
 
+//accordion
 accordions.forEach((accordion) => {
   accordion.addEventListener("click", (e) => {
-    //to deactivate buttons
-    console.log(e.target);
-    accordions.forEach((accordionItem) => {
-      if (accordionItem !== e.currentTarget) {
-        accordionItem.classList.remove("active");
-      }
-    });
-    //to make button active
-    e.currentTarget.classList.toggle("active");
+    const accordionBtn = document.querySelector(".accordion__btn");
+    //to deactivate accordions
+    if(e.target === accordionBtn) {
+      accordions.forEach((accordionItem) => {
+        if (accordionItem !== e.currentTarget) {
+          accordionItem.classList.remove("active");
+        }
+      });
+      //to make accordion active
+      accordion.classList.toggle("active");
+    }
   });
 });
 

@@ -30,6 +30,9 @@
             font-size: rem(16);
         }
     }
+    &__icon {
+        pointer-events: none;
+    }
     &__info{
         display: none;
         padding: rem(6) 0 rem(12);
