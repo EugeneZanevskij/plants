@@ -141,7 +141,7 @@ function displayAdress(value) {
                 <span class="adress__value">${adress.adress}</span>
             </div>
         </div>
-        <button class="adress__call">Call us</button>
+        <a href="tel:${adress.phone}" class="adress__call">Call us</a>
     </div>`;
     contactsAdress.innerHTML = adressResult;
 }

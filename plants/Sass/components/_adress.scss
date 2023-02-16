@@ -45,8 +45,15 @@
         @include font(rem(10), $font-bold);
         line-height: rem(13);
         padding: rem(7) rem(29);
+        width: fit-content;
         background: transparent;
         border: rem(1) solid $color-text-orange;
         border-radius: rem(5);
+        color: $color-text-primary-grey;
+
+        &:hover {
+            background-color: $color-text-orange;
+            color: $color-background-white;
+        }
     }
 }

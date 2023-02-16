@@ -1126,9 +1126,15 @@ p {
   font-weight: 700;
   line-height: 0.8125rem;
   padding: 0.4375rem 1.8125rem;
+  width: fit-content;
   background: transparent;
   border: 0.0625rem solid hsl(18deg, 74%, 54%);
   border-radius: 0.3125rem;
+  color: hsl(0deg, 0%, 44%);
+}
+.adress__call:hover {
+  background-color: hsl(18deg, 74%, 54%);
+  color: hsl(0deg, 0%, 100%);
 }
 
 /*# sourceMappingURL=main.css.map */
