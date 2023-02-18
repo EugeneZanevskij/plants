@@ -26,6 +26,7 @@ const navLinks = document.querySelectorAll(".nav__link");
 const serviceBtns = document.querySelectorAll(".service__btn");
 const serviceProjects = document.querySelectorAll(".service__project");
 const accordions = document.querySelectorAll(".accordion");
+const accordionBtns = document.querySelectorAll(".accordion__btn");
 const toggle = document.querySelector(".header__toggle");
 const headerNav = document.querySelector(".header__nav");
 const dropdown = document.querySelector(".dropdown");
@@ -71,10 +72,9 @@ serviceBtns.forEach((serviceBtn) => {
   });
 });
 
-//accordion
 accordions.forEach((accordion) => {
   accordion.addEventListener("click", (e) => {
-    const accordionBtn = document.querySelector(".accordion__btn");
+    const accordionBtn = accordion.querySelector(".accordion__btn");
     //to deactivate accordions
     if(e.target === accordionBtn) {
       accordions.forEach((accordionItem) => {
