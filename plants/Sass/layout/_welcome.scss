@@ -1,0 +1,83 @@
+@use "../abstracts" as *;
+
+.welcome {
+    background-color: $color-background-green;
+    padding: 3.875rem 0;
+    font-family: $font-inter;
+
+    @include respond-to(medium) {
+        padding: 2.5rem 0 4.375rem;
+    }
+    @include respond-to(small) {
+        padding: 1.5625rem 0;
+    }
+
+    &__container {
+        @include flex(row, space-between);
+
+        @include respond-to(medium) {
+            @include flex(row-reverse, center);
+        }
+    }
+
+    &__image, &__image img {
+        @include size(28rem, 25.5rem);
+
+        @include respond-to(large) {
+            @include size(rem(280), rem(254));
+        }
+        @include respond-to(small) {
+            display: none;
+        }
+    }
+
+    &__content {
+        width: min(52%, rem(549));
+        @include flex;
+        gap:rem(42);
+
+        @include respond-to(medium) {
+            width: max(100%, rem(346));
+            gap:rem(30);
+        }
+        @include respond-to(small) {
+            gap:rem(20);
+        }
+    }
+    &__text {
+        @include font(rem(20));
+        line-height: rem(35);
+        margin-bottom: rem(6);
+
+        @include respond-to(medium) {
+            @include font(rem(16));
+            line-height: rem(25);
+            margin-bottom: 0;
+        }
+    }
+
+    &__btn {
+        cursor: pointer;
+        border: rem(2) solid $color-text-orange;
+        border-radius: rem(10);
+        background: transparent;
+        padding: rem(14) rem(27);
+        margin-inline: 0 auto;
+        @include font(rem(16));
+        line-height: rem(20);
+        text-transform: uppercase;
+
+        &:hover {
+            background-color: $color-text-orange;
+            color: $color-background-white;
+        }
+
+        @include respond-to(medium) {
+            @include font(rem(16));
+        }
+        @include respond-to(medium) {
+            @include font(rem(10));
+            padding: rem(8) rem(18);
+        }
+    }
+}

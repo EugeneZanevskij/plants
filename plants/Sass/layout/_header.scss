@@ -1,0 +1,72 @@
+@use "../abstracts" as *;
+
+.header {
+    background-color: $color-background-green;
+    padding: 2.625rem 0;
+    color: $color-text-black;
+    font-family: $font-inika;
+
+    @include respond-to(medium) {
+        padding: 2.25rem 0;
+    }
+
+    &__container {
+        @include flex(row, space-between);
+
+        @include respond-to(small) {
+            @include flex (column, center, flex-start);
+            gap: rem(10);
+        }
+    }
+
+    &__logo {
+
+        img {
+            @include size(1.25rem);
+        }
+    }
+
+    &__nav {
+        @include respond-to(small) {
+            width: 100%;
+            display: none;
+            &.active {
+                display: block;
+            }
+        }
+    }
+    
+    &__toggle {
+        position: absolute;
+        right: rem(25);
+        top:rem(36);
+        cursor: pointer;
+        @include size(2.5rem, 1.5rem);
+        @include flex(column, space-between);
+        display:none;
+        
+        .bar {
+            @include size(rem(40), rem(2));
+            background-color: $color-text-neutral-grey;
+        }
+
+        &.active {
+            .bar:first-child {
+                transform: rotate(45deg) translateY(rem(15.5));
+            }
+            .bar:last-child {
+                transform: rotate(-45deg) translateY(rem(-15.5));
+            }
+            .bar:nth-child(2) {
+                display: none;
+            }
+            .bar:nth-child(3) {
+                display: none;
+            }
+        }
+        
+        @include respond-to(small) {
+            display: flex;
+        }
+    }
+}

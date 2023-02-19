@@ -1,0 +1,17 @@
+@use "../abstracts" as *;
+
+html {
+    font-size: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $font-inter;
+    @include font(1rem, $font-regular);
+    min-height: 100vh;
+    color: $color-text-neutral-grey;
+}
+
+a {
+    text-decoration: none;
+}

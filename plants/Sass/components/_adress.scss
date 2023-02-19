@@ -1,0 +1,59 @@
+@use "../abstracts" as *;
+
+.adress {
+    width:100%;
+    background: transparent;
+    border: rem(1) solid $color-text-black;
+    border-radius: rem(20);
+    padding: rem(17) rem(33) rem(32);
+
+    &__box {
+        @include flex(column, center, flex-start);
+        gap: rem(5);
+    }
+    
+    &__line {
+        @include flex(row, center, flex-start);
+        @include font(rem(16));
+        line-height: rem(40);
+        // height: rem(40);
+        letter-spacing: 0.05em;
+        @include respond-to(small) {
+            line-height: rem(20);
+        }
+    }
+    
+    &__name {
+        display: block;
+        width: rem(132);
+        color: $color-text-black;
+        
+        @include respond-to(small) {
+            width: rem(65);
+        }
+    }
+
+    &__value {
+        display: block;
+    }
+
+    &__call {
+        cursor: pointer;
+        display: block;
+        margin: rem(24) auto 0;
+        font-family: $font-inika;
+        @include font(rem(10), $font-bold);
+        line-height: rem(13);
+        padding: rem(7) rem(29);
+        width: fit-content;
+        background: transparent;
+        border: rem(1) solid $color-text-orange;
+        border-radius: rem(5);
+        color: $color-text-primary-grey;
+
+        &:hover {
+            background-color: $color-text-orange;
+            color: $color-background-white;
+        }
+    }
+}

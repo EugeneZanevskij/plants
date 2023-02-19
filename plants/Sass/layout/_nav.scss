@@ -1,0 +1,35 @@
+@use "../abstracts" as *;
+
+.nav {
+    @include flex(row);
+    gap: 2.875rem;
+
+    @include respond-to(small) {
+        @include flex;
+        gap: 0;
+        text-align: center;
+    }
+    
+    &__item {
+        line-height: 3.125rem;
+        font-weight: $font-bold;
+
+        &:hover {
+            background-color: $color-background-accordion;
+        }
+
+        @include respond-to(small) {
+            width: 100%;
+        }
+    }
+
+    &__link{
+        color: $color-text-neutral-grey;
+        display: block;
+        @include size(100%);
+
+        &.active {
+            color: $color-text-orange;
+        }
+    }
+}

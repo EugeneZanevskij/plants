@@ -1,0 +1,69 @@
+@use "../abstracts" as *;
+
+.accordion {
+    border-radius: 20px;
+    background-color: $color-background-green;
+    padding: 0 rem(40);
+    overflow: hidden;
+    width: 100%;
+    cursor: pointer;
+    @include respond-to(small) {
+        font-size: rem(16);
+        padding-inline: rem(30) rem(40);
+    }
+
+    &:hover {
+        background-color: $color-background-accordion;
+    }
+
+    &__btn {
+        @include flex(row,space-between);
+        padding: rem(16) 0;
+        background: transparent;
+        border: none;
+        width: 100%;
+        @include font(rem(20), $font-bold);
+        line-height: rem(20);
+        color: $color-text-black;
+
+        @include respond-to(small) {
+            font-size: rem(16);
+        }
+    }
+    &__icon {
+        pointer-events: none;
+    }
+    &__info{
+        display: none;
+        padding: rem(6) 0 rem(12);
+        @include before(100%, 0, 0, $color-text-primary-grey);
+    }
+    &__desc {
+        @include font(rem(10));
+        line-height: rem(10);
+        margin-bottom: rem(6);
+    }
+    &__price {
+        line-height: rem(20);
+        margin-bottom: rem(12);
+        color: $color-text-black;
+        .u-text--orange {
+            @include font(rem(20), $font-bold);
+        }
+    }
+    &__order {
+        padding: rem(3) rem(20);
+        background: $color-background-white;
+        border-radius: rem(10);
+        line-height: rem(20);
+        @include font(rem(14), $font-bold);
+        color: $color-text-neutral-grey;
+    }
+    &.active {
+        background-color: $color-background-accordion;
+    }
+    &__info:is(&.active > *) {
+        display: block;
+    }
+    
+}

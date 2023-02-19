@@ -1,0 +1,37 @@
+@use "../abstracts" as *;
+
+.card {
+    text-align: center;
+    border: rem(1) solid $color-border-card;
+    border-radius: rem(20);
+
+    @include respond-to(small) {
+        margin-inline: rem(25);
+    }
+
+    &__image img {
+        @include img-cover;
+    }
+
+    &__header {
+        @include font(rem(20), $font-bold);
+        line-height: rem(20);
+        color: $color-text-orange;
+        margin: rem(10) 0;
+    }
+
+    &__text {
+        margin-bottom: rem(36);
+        
+        @include respond-to(medium) {
+            margin-bottom: rem(18);
+        }
+        @include respond-to(small) {
+            margin-bottom: rem(20);
+        }
+    }
+
+    &.blur {
+        @include css3-prefix(filter, blur(rem(2)));
+    }
+}
